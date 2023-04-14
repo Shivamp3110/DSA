@@ -1,0 +1,15 @@
+
+int sum(int input[], int n) {
+
+   
+    if(n==0){
+return 0;}
+    
+   
+  int  fsum = input[0] + sum(input +1, n-1);
+    
+     
+    
+    return fsum;
+
+}
