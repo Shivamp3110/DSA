@@ -1,0 +1,25 @@
+#include <iostream>
+#include "solution.h"
+using namespace std;
+#include <cmath>
+#include <string.h>
+int stringToNumber(char input[]) {
+  // Write your code here
+  int n = strlen(input);
+  if (n == 0)
+    return 0;
+  int ans = stringToNumber(input + 1);
+
+  int first = input[0] - '0';
+  int num_zero = pow(10, n - 1);
+
+  return (first * num_zero + ans);
+
+}
+}
+
+int main() {
+    char input[50];
+    cin >> input;
+    cout << stringToNumber(input) << endl;
+}
