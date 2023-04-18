@@ -1,0 +1,26 @@
+#include <iostream>
+#include "solution.h"
+using namespace std;
+void towerOfHanoi(int n, char source, char auxiliary, char destination) {
+
+  // if (n == 1) {
+  //  destination = source;
+  // }
+  
+  // int smallcode =  towerOfHanoi(int n-1,source,auxiliary,destination);
+  // auxiliary = source;
+  // destination = auxiliary;
+      if(n==0) return;
+    towerOfHanoi(n-1,source,destination,auxiliary);
+    cout<<source<<" "<<destination<<endl;
+    towerOfHanoi(n-1,auxiliary,source,destination);
+
+
+
+}
+int main() {
+   char input[100];
+   cin.getline(input, 100);
+   pairStar(input);
+   cout << input << endl;
+}
