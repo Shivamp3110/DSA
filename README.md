@@ -1,2 +1,2 @@
 # DSA
-questions from dsa in c++
+DSA in C++
