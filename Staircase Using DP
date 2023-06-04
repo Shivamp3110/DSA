@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+#define mod 1000000007
+long staircase(int n)
+{
+    // Write your code here
+    long long a=1,b=1,c=2;
+    for (int i = 3; i <= n; i++){
+        long long d = (a+b+c)%mod;
+        a=b;
+        b=c;
+        c=d;
+        }
+    return c%mod;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    int count=n;
+    for(int i=1;count!=0; count--){
+            
+               cin>> i ;
+          cout << staircase(i)<<endl;
+          
+    }
+  
+}
