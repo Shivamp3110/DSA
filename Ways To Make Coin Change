@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+#include "solution.h"
+
+int main()
+{
+
+	int numDenominations;
+	cin >> numDenominations;
+	
+	int *denominations = new int[numDenominations];
+
+	for (int i = 0; i < numDenominations; i++)
+	{
+		cin >> denominations[i];
+	}
+
+	int value;
+	cin >> value;
+
+	cout << countWaysToMakeChange(denominations, numDenominations, value);
+
+	delete[] denominations;
+}
